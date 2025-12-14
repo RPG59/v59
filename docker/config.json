@@ -1,0 +1,45 @@
+{
+  "LOG": true,
+  "LOG_LEVEL": "debug",
+  "CLAUDE_PATH": "",
+  "HOST": "127.0.0.1",
+  "PORT": 3456,
+  "APIKEY": "$CCR_API_KEY",
+  "API_TIMEOUT_MS": "60000",
+  "transformers": [],
+  "Providers": [
+    {
+      "name": "openrouter",
+      "api_base_url": "https://openrouter.ai/api/v1/chat/completions",
+      "api_key": "$OPENROUTER_TOKEN",
+      "models": [
+        "anthropic/claude-sonnet-4.5"
+      ],
+      "transformer": {
+        "use": [
+          "openrouter"
+        ]
+      }
+    }
+  ],
+  "StatusLine": {
+    "enabled": false,
+    "currentStyle": "default",
+    "default": {
+      "modules": []
+    },
+    "powerline": {
+      "modules": []
+    }
+  },
+  "Router": {
+    "default": "openrouter,anthropic/claude-sonnet-4.5",
+    "background": "openrouter,anthropic/claude-sonnet-4.5",
+    "think": "openrouter,anthropic/claude-sonnet-4.5",
+    "longContext": "openrouter,anthropic/claude-sonnet-4.5",
+    "longContextThreshold": 6000,
+    "webSearch": "openrouter,anthropic/claude-sonnet-4.5",
+    "image": "openrouter,anthropic/claude-haiku-4.5"
+  },
+  "CUSTOM_ROUTER_PATH": ""
+}
