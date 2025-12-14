@@ -46,6 +46,7 @@ export class DockerService {
           `ANTHROPIC_API_KEY=${config.claude.apiKey}`,
           `SESSION_ID=${sessionId}`,
           `THREAD_ID=${threadId}`,
+          `OPENROUTER_TOKEN=${config.openrouter.apiKey}`,
         ],
         HostConfig: {
           Binds: [`${workspacePath}:/workspace`],

@@ -283,6 +283,8 @@ export class ClaudeCodeService {
     threadId: string
   ): Promise<void> {
     try {
+      const { config } = await import("../config");
+
       // Mattermost message attachments with actions
       const attachment = {
         text: "Want to push these files to GitLab?",

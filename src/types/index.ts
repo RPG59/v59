@@ -55,6 +55,9 @@ export interface Config {
   claude: {
     apiKey: string;
   };
+  openrouter: {
+    apiKey: string;
+  }
   server: {
     port: number;
     host: string;
